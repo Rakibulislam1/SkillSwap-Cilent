@@ -1,0 +1,56 @@
+[
+  {
+    "service_name": "Plumbing",
+    "service_img": "https://i.ibb.co/XDsJnyB/plumbing.jpg",
+    "provider_name": "John's",
+    "provider_img": "https://i.ibb.co/qM4RqYW/Plumbing-1.jpg",
+    "service_des": "Professional plumbing services for all your needs.",
+    "service_price": 75.99,
+    "service_area": "New York, NY"
+  },
+  {
+    "service_name": "Electrician",
+    "service_img": "https://i.ibb.co/Y3jtzT9/Electrician.jpg",
+    "provider_name": "Sparky",
+    "provider_img": "https://i.ibb.co/6yqFHYz/Electrician-1.jpg",
+    "service_des": "Experienced electricians for residential and commercial projects.",
+    "service_price": 85.50,
+    "service_area": "Los Angeles, CA"
+  },
+  {
+    "service_name": "Landscaping",
+    "service_img": "https://i.ibb.co/9vXKVJ9/Landscaping.jpg",
+    "provider_name": "GreenScapes",
+    "provider_img": "https://i.ibb.co/QKNhPgZ/Landscaping-1.jpg",
+    "service_des": "Transform your outdoor space with our landscaping services.",
+    "service_price": 120.00,
+    "service_area": "Chicago, IL"
+  },
+  {
+    "service_name": "House Cleaning",
+    "service_img": "https://i.ibb.co/X8nQRQV/House-Cleaning.jpg",
+    "provider_name": "Sweep ",
+    "provider_img": "https://i.ibb.co/hD3PX0K/House-Cleaning-1.jpg",
+    "service_des": "Professional house cleaning services for a spotless home.",
+    "service_price": 60.99,
+    "service_area": "Houston, TX"
+  },
+  {
+    "service_name": "Car Repair",
+    "service_img": "https://i.ibb.co/qgCvNSw/Car-Repair.jpg",
+    "provider_name": "Ola",
+    "provider_img": "https://i.ibb.co/PNyDXQ0/Car-Repair-1.jpg",
+    "service_des": "Quality car repair and maintenance services.",
+    "service_price": 95.00,
+    "service_area": "Miami, FL"
+  },
+  {
+    "service_name": "Painting Services",
+    "service_img": "https://i.ibb.co/0JjvV3n/Painting.jpg",
+    "provider_name": "Nik",
+    "provider_img": "https://i.ibb.co/ggcLWBv/Painting-1.jpg",
+    "service_des": "Personalized tutoring services for students of all ages.",
+    "service_price": 50.00,
+    "service_area": "San Francisco, CA"
+  }
+]
