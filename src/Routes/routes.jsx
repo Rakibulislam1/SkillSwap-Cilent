@@ -5,6 +5,7 @@ import Login from "../Pages/Login";
 import Registration from "../Pages/Registration";
 import ErrorPage from "../Pages/ErrorPage";
 import Services from "../Pages/Services";
+import SingleService from "../Components/SingleService";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,12 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services></Services>,
+        loader: () => fetch("http://localhost:5000/api/v1/services")
+      },
+      {
+        path: '/singleService/:id',
+        element: <SingleService></SingleService>,
+        loader: () => fetch("http://localhost:5000/api/v1/services")
       }
     ]
   },

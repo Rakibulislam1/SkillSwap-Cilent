@@ -5,7 +5,6 @@ import useAuth from "../Hooks/useAuth";
 
 const Nav = () => {
   const { logout, user } = useAuth();
-  console.log(user);
 
   return (
     // <div className="shadow-xl sticky top-0 z-30 bg-white">
@@ -90,7 +89,7 @@ const Nav = () => {
     //   </Navbar>
     // </div>
 
-    <Navbar fluid rounded>
+    <Navbar fluid rounded className="shadow-md">
       <Navbar.Brand>
         <span className="self-center whitespace-nowrap text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#6345ED] to-[#DC39FC]">
           SkillSwap
