@@ -1,7 +1,20 @@
 
+// import { useQuery } from "@tanstack/react-query";
 import avatar from "../../src/assets/Images/avatar.jpg";
 
 const PopularService = () => {
+
+  // const axios = useAxi
+
+  // const getServices = () => {
+
+  // }
+
+  // const query = useQuery({
+  //   queryKey : ['service'],
+  //   queryFn : []
+  // })
+
   return (
     <div>
       <h2 className="text-center my-10 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#6345ED] to-[#DC39FC]">
