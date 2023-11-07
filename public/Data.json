@@ -6,7 +6,8 @@
     "provider_img": "https://i.ibb.co/qM4RqYW/Plumbing-1.jpg",
     "service_des": "Professional plumbing services for all your needs. At John's Plumbing, we're dedicated to providing top-notch plumbing services in New York, NY. Our team of experienced plumbers is committed to addressing all your plumbing needs, from minor repairs to major installations. We use advanced technology and high-quality materials to ensure lasting results. Whether it's a leaky faucet, a clogged drain, or a complete plumbing overhaul, we've got the expertise to deliver efficient and reliable solutions. We pride ourselves on our 24/7 emergency service and prompt response to your plumbing issues. Our competitive pricing and exceptional service make us your trusted local plumbing partner. Contact us today for a stress-free plumbing experience.",
     "service_price": 75.99,
-    "service_location": "New York, NY"
+    "service_location": "New York, NY",
+    "service_provider_email": "johns@example.com"
   },
   {
     "service_name": "Electrician",
@@ -15,7 +16,8 @@
     "provider_img": "https://i.ibb.co/6yqFHYz/Electrician-1.jpg",
     "service_des": "Experienced electricians for residential and commercial projects. Sparky Electric is your reliable choice for electrical solutions in Los Angeles, CA. Our experienced team of electricians is dedicated to providing safe and efficient electrical services for residential and commercial clients. From installing lighting fixtures to complex wiring projects, we have the expertise to get the job done right. We prioritize safety and quality, ensuring compliance with all regulations. Whether you require repairs, upgrades, or new installations, we're equipped to meet your needs. Sparky Electric is your trusted partner for all things electrical, offering the expertise you can count on.",
     "service_price": 85.5,
-    "service_location": "Los Angeles, CA"
+    "service_location": "Los Angeles, CA",
+    "service_provider_email": "sparky@example.com"
   },
   {
     "service_name": "Landscaping",
@@ -24,7 +26,8 @@
     "provider_img": "https://i.ibb.co/QKNhPgZ/Landscaping-1.jpg",
     "service_des": "Transform your outdoor space with our landscaping services. GreenScapes is your go-to choice for creating stunning outdoor landscapes in Chicago, IL. Our team of landscape architects and horticulturists specializes in designing and installing beautiful landscapes, from lush gardens to elegant hardscapes. We pay attention to every detail, collaborating closely with you to bring your vision to life. Whether you desire a serene garden retreat or a vibrant outdoor entertaining area, our expertise and creativity can make it a reality. Contact GreenScapes to turn your outdoor space into a natural oasis of beauty.",
     "service_price": 120.0,
-    "service_location": "Chicago, IL"
+    "service_location": "Chicago, IL",
+    "service_provider_email": "greenscapes@example.com"
   },
   {
     "service_name": "House Cleaning",
@@ -33,7 +36,8 @@
     "provider_img": "https://i.ibb.co/hD3PX0K/House-Cleaning-1.jpg",
     "service_des": "Professional house cleaning services for a spotless home. Sweep offers high-quality house cleaning services in Houston, TX. Our dedicated team of cleaning professionals is committed to delivering top-notch cleaning tailored to your specific needs. Whether you require deep cleaning or regular maintenance, we utilize eco-friendly products and advanced equipment to ensure a clean and healthy living environment. We leave no corner uncleaned, and your satisfaction is our priority. Our flexible scheduling caters to your busy lifestyle, ensuring you come home to a clean and fresh space. Experience the difference with Sweep today.",
     "service_price": 60.99,
-    "service_location": "Houston, TX"
+    "service_location": "Houston, TX",
+    "service_provider_email": "sweep@example.com"
   },
   {
     "service_name": "Car Repair",
@@ -42,7 +46,8 @@
     "provider_img": "https://i.ibb.co/PNyDXQ0/Car-Repair-1.jpg",
     "service_des": "Quality car repair and maintenance services. Ola provides top-notch car repair and maintenance services in Miami, FL. Our team of skilled technicians is dedicated to ensuring the longevity and safety of your vehicle. We are well-equipped to handle a wide range of automotive issues, from engine repairs to brake maintenance. We employ state-of-the-art diagnostic tools and genuine parts to guarantee the reliability of your vehicle. We understand the significance of your vehicle in your daily life and strive to minimize downtime. Trust Ola for cost-effective and dependable car care, where your safety and satisfaction take precedence.",
     "service_price": 95.0,
-    "service_location": "Miami, FL"
+    "service_location": "Miami, FL",
+    "service_provider_email": "ola@example.com"
   },
   {
     "service_name": "Painting Services",
@@ -51,6 +56,7 @@
     "provider_img": "https://i.ibb.co/ggcLWBv/Painting-1.jpg",
     "service_des": "Professional painting services to refresh your spaces. Nik provides personalized tutoring services for students of all ages in San Francisco, CA. We offer individualized tutoring for various subjects, helping students with math, science, language, and test preparation. Our experienced tutors understand the unique learning needs of each student, tailoring their approach to suit individual strengths and challenges. We aim not only to improve grades but also to foster a love for learning. We create a supportive and engaging learning environment that encourages curiosity and critical thinking. Contact Nik to unlock your full academic potential.",
     "service_price": 50.0,
-    "service_location": "San Francisco, CA"
+    "service_location": "San Francisco, CA",
+    "service_provider_email": "nik@example.com"
   }
 ]

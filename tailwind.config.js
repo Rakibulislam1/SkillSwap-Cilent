@@ -9,8 +9,9 @@ export default {
     extend: {},
   },
   plugins: [require('flowbite/plugin')],
+  plugins: [require("daisyui")],
   // daisyui: {
-  //   themes: ["emerald"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+  //   themes: ["false"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
   // },
 
 }

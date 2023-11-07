@@ -6,6 +6,7 @@ import Registration from "../Pages/Registration";
 import ErrorPage from "../Pages/ErrorPage";
 import Services from "../Pages/Services";
 import SingleService from "../Components/SingleService";
+import MyBooking from "../Components/MyBooking";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: '/singleService/:id',
         element: <SingleService></SingleService>,
         loader: () => fetch("http://localhost:5000/api/v1/services")
+      },
+      {
+        path: '/bookService',
+        element: <MyBooking></MyBooking>,
       }
     ]
   },
