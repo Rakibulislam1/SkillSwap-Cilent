@@ -21,7 +21,7 @@ const Nav = () => {
             label={
               <Avatar
                 alt="User settings"
-                img={user.photoURL}
+                img={user?.photoURL}
                 rounded
               />
             }
@@ -77,10 +77,10 @@ const Nav = () => {
             </Dropdown.Item>
             <Dropdown.Item>
               <NavLink
-                to="/services"
+                to="/addService"
                 className={({ isActive }) => (isActive ? "underline" : "")}
               >
-                Ami
+                Add Service
               </NavLink>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -88,7 +88,7 @@ const Nav = () => {
                 to="/services"
                 className={({ isActive }) => (isActive ? "underline" : "")}
               >
-                Ami
+                My schedules
               </NavLink>
             </Dropdown.Item>
             

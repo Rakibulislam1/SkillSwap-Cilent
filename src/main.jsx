@@ -17,7 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <RouterProvider router={router} />
       </AuthProvider>
     </QueryClientProvider>
-    <Toaster />
     <Toaster position="bottom-left" reverseOrder={false} />
   </React.StrictMode>
 );

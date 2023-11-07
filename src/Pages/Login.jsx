@@ -110,9 +110,9 @@ const Login = () => {
             </form>
 
             <div className="grid grid-cols-3 items-center justify-center text-center">
-              <hr className="border-2" />
+              <hr/>
               <p className="text-lg text-center font-medium text-gray-500">or</p>
-              <hr className="border-2" />
+              <hr/>
             </div>
             <Link>
               <span
