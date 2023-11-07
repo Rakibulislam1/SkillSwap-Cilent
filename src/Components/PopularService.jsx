@@ -27,7 +27,7 @@ const PopularService = () => {
         Popular Services
       </h2>
       <div className="grid lg:grid-cols-2 gap-5 px-2">
-        {popular.map((popularServices) => (
+        {popular.slice(0, 4).map((popularServices) => (
           <div key={popularServices._id}>
             <div className="relative hover:shadow-xl flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
@@ -93,6 +93,7 @@ const PopularService = () => {
           </div>
         ))}
       </div>
+        <Link to='/services'><button className="px-4 my-10 block mx-auto py-2 font-semibold text-white rounded-md bg-gradient-to-r from-[#6345ED] to-[#DC39FC] hover:rounded-full">Show All</button></Link>
     </div>
   );
 };

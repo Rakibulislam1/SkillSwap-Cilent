@@ -8,6 +8,7 @@ import Services from "../Pages/Services";
 import SingleService from "../Components/SingleService";
 import MyBooking from "../Components/MyBooking";
 import AddService from "../Components/AddService";
+import MySchedules from "../Components/MySchedules";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         path: '/addService',
         element: <AddService></AddService>,
         loader: () => fetch("http://localhost:5000/api/v1/services")
+      },
+      {
+        path:'/mySchedules',
+        element: <MySchedules></MySchedules>,
       }
     ]
   },

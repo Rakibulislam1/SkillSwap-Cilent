@@ -72,7 +72,7 @@ const Nav = () => {
                 to="/bookService"
                 className={({ isActive }) => (isActive ? "underline" : "")}
               >
-                My Booking
+                My Services
               </NavLink>
             </Dropdown.Item>
             <Dropdown.Item>

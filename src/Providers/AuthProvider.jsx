@@ -2,6 +2,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged,
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Configs/Firebase.config";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export const AuthContext = createContext();
 const Provider = new GoogleAuthProvider();
@@ -51,6 +52,16 @@ const AuthProvider = ({children}) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      const userEmail = currentUser?.email || user?.email;
+
+      const loggedUser = { email: userEmail };
+      if (currentUser) {
+        axios
+          .post("http://localhost:5000/jwt", loggedUser, { withCredentials: true })
+          .then((res) => {
+            console.log(res.data);
+          });
+      }
       setIsLoading(false);
     });
     

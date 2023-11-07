@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Registration = () => {
 
@@ -37,6 +38,10 @@ const Registration = () => {
 
   return (
     <section>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Skill-Swap | Register</title>
+      </Helmet>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <Link
           href="#"

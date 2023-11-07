@@ -2,16 +2,13 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-import googleImg from "../../src/assets/Images/google.png"
-
+import googleImg from "../../src/assets/Images/google.png";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
-
-  const {login, googleSignIn} = useAuth();
-
+  const { login, googleSignIn } = useAuth();
 
   const navigate = useNavigate();
-
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -19,40 +16,38 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading('Logging in...')
+    const toastId = toast.loading("Logging in...");
 
-    try{
-      await login(email, password)
-      toast.success('Logged in successfully', {id : toastId})
+    try {
+      await login(email, password);
+      toast.success("Logged in successfully", { id: toastId });
 
-
-      navigate('/')
+      navigate("/");
+    } catch (err) {
+      toast.error(err.message, { id: toastId });
     }
-    catch(err){
-      toast.error(err.message, {id : toastId});
-    }
-
-  }
+  };
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading('Logging in...');
+    const toastId = toast.loading("Logging in...");
 
-    try{
-      await googleSignIn()
-      toast.success('Logged in successfully', {id : toastId});
+    try {
+      await googleSignIn();
+      toast.success("Logged in successfully", { id: toastId });
 
-
-      navigate('/')
+      navigate("/");
+    } catch (err) {
+      toast.error(err.message, { id: toastId });
     }
-    catch(err){
-      toast.error(err.message, {id : toastId});
-    }
-
-  }
+  };
 
   return (
     <section>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Skill-Swap | Login</title>
+      </Helmet>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <Link
           href="#"
@@ -65,7 +60,11 @@ const Login = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Sign in to your account
             </h1>
-            <form onSubmit={handleLogin} className="space-y-4 md:space-y-6" action="#">
+            <form
+              onSubmit={handleLogin}
+              className="space-y-4 md:space-y-6"
+              action="#"
+            >
               <div>
                 <label
                   htmlFor="email"
@@ -100,7 +99,7 @@ const Login = () => {
                   onBlur={(e) => setPassword(e.target.value)}
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full text-white bg-gray-600 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
@@ -110,9 +109,11 @@ const Login = () => {
             </form>
 
             <div className="grid grid-cols-3 items-center justify-center text-center">
-              <hr/>
-              <p className="text-lg text-center font-medium text-gray-500">or</p>
-              <hr/>
+              <hr />
+              <p className="text-lg text-center font-medium text-gray-500">
+                or
+              </p>
+              <hr />
             </div>
             <Link>
               <span
@@ -125,13 +126,14 @@ const Login = () => {
             </Link>
 
             <p className="text-sm text-center font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet ? {" "}
-                <Link to='/register'
-                  className="font-medium text-base-200 hover:underline dark:text-base-300"
-                >
+              Don’t have an account yet ?{" "}
+              <Link
+                to="/register"
+                className="font-medium text-base-200 hover:underline dark:text-base-300"
+              >
                 Sign up
-                </Link>
-              </p>
+              </Link>
+            </p>
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const MyBooking = () => {
   const { user } = useAuth();
   const [bookings, setBookings] = useState([]);
   const url = `http://localhost:5000/api/bookings/${user?.email}`;
-
   useEffect(() => {
     axios.get(url).then((res) => {
       setBookings(res.data);
@@ -16,6 +16,10 @@ const MyBooking = () => {
 
   return (
     <div className="mb-10 h-screen">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>SwapSkill | My-Services</title>
+      </Helmet>
       {bookings?.map((booking) => (
         <div key={booking._id}>
           <div className="overflow-x-auto">
@@ -37,26 +41,18 @@ const MyBooking = () => {
                 <tr className="text-center">
                   <td>
                     <div className="flex items-center justify-center space-x-3">
-                      <div className="avatar">
-                        <div className="mask mask-circle w-12 h-12">
-                          <img 
-                            src={user?.photoURL}
-                            alt="Avatar Tailwind CSS Component"
-                          />
-                        </div>
-                      </div>
                       <div>
-                        <div className="font-bold">{booking.providerName}</div>
+                        <div className="font-bold">{booking.provider_name}</div>
                       </div>
                     </div>
                   </td>
                   <td>
                     <span>
-                      {booking.serviceName}
+                      {booking.service_name}
                     </span>
                   </td>
                   <td>{booking.date}</td>
-                  <td>$ {booking.price}</td>
+                  <td>$ {booking.service_price}</td>
                   <th>
                     <button className="btn btn-warning block mx-auto btn-xs capitalize">Update</button>
                   </th>

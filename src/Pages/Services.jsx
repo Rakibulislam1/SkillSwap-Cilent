@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { FaLocationDot, FaLocationArrow } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
   const allServicesData = useLoaderData();
@@ -7,6 +8,10 @@ const Services = () => {
   
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Skill-Swap | All-Services</title>
+      </Helmet>
       <div className="shadow-2xl my-10 bg-gradient-to-r from-[#6345ED] to-[#DC39FC] mx-auto p-5 rounded-3xl lg:w-2/3">
         <div className="flex lg:flex-row flex-col items-center lg:gap-20 justify-center">
           <div className="mb-3">
