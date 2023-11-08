@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
         Why Choose Us
       </h2>
       <p className="text-center font-semibold text-lg">
-        Because we care about your safety..
+        Because we care about your safety
       </p>
       <div className="flex lg:flex-row flex-col justify-center gap-20 items-center mx-auto max-w-7xl my-10">
         <div className="">

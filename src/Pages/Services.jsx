@@ -1,8 +1,11 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { FaLocationDot, FaLocationArrow } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
+import useAuth from "../Hooks/useAuth";
 
 const Services = () => {
+
+  const {user} = useAuth()
   const allServicesData = useLoaderData();
 
   
@@ -26,9 +29,9 @@ const Services = () => {
             <input
               type="text"
               placeholder="Enter Email Address"
-              className="input input-bordered rounded-full py-3 px-5 md:w-[380px] w-[350px]"
+              className="input input-bordered border-none rounded-full py-3 px-5 md:w-[380px] w-[350px]"
             />
-            <div className="flex rounded-full mr-2 px-4 py-2 items-center gap-2 bg-gradient-to-r from-[#6345ED] to-[#DC39FC] absolute ">
+            <div className="flex rounded-full mr-1 px-4 py-2 items-center gap-2 bg-gradient-to-r from-[#6345ED] to-[#DC39FC] absolute ">
               <FaLocationArrow className="text-white"></FaLocationArrow>
               <p className="text-white font-semibold">Browse More</p>
             </div>

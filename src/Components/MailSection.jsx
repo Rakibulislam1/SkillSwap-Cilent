@@ -13,7 +13,7 @@ const MailSection = () => {
             placeholder="Enter Email Address"
             className="input input-bordered rounded-full py-3 px-5 md:w-[380px] w-[350px]"
           />
-          <div className="flex rounded-full mr-2 px-4 py-2 items-center gap-2 bg-gradient-to-r from-[#6345ED] to-[#DC39FC] absolute ">
+          <div className="flex rounded-full mr-1 px-4 py-2 items-center gap-2 bg-gradient-to-r from-[#6345ED] to-[#DC39FC] absolute ">
             <FaLocationArrow className="text-white"></FaLocationArrow>
             <p className="text-white font-semibold">Browse More</p>
           </div>

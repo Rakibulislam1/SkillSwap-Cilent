@@ -56,7 +56,7 @@ const Footers = () => {
           </div>
         </div>
         <Footer.Divider />
-        <div className="flex justify-evenly px-2">
+        <div className="flex justify-evenly mb-5">
           <h2>Copyright © 2023 Skill Swap | All Rights Reserved</h2>
           <div className="flex justify-center items-center gap-5">
             <Link>

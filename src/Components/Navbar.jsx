@@ -69,7 +69,7 @@ const Nav = () => {
           <Dropdown label="Dropdown" inline>
             <Dropdown.Item>
               <NavLink
-                to="/bookService"
+                to="/myServices"
                 className={({ isActive }) => (isActive ? "underline" : "")}
               >
                 My Services
@@ -85,7 +85,7 @@ const Nav = () => {
             </Dropdown.Item>
             <Dropdown.Item>
               <NavLink
-                to="/services"
+                to="/mySchedules"
                 className={({ isActive }) => (isActive ? "underline" : "")}
               >
                 My schedules

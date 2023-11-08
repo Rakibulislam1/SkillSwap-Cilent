@@ -30,21 +30,21 @@ const Banner = () => {
       className="mySwiper h-[50vh] md:h-[80vh] lg:h-[100vh]"
     >
       <div className="relative">
-        <SwiperSlide className="relative object-cover w-max before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-purple-700 before:opacity-20">
+        <SwiperSlide className="relative object-cover w-max before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-40">
           <img
             className="md:h-[80vh] h-[50vh] lg:h-[120vh] w-full bg-cover bg-center bg-no-repeat"
             src={banner1}
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide className="relative object-cover w-max before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-purple-700 before:opacity-20">
+        <SwiperSlide className="relative object-cover w-max before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-40">
           <img
             className="md:h-[80vh] h-[50vh] lg:h-[120vh] w-full bg-cover bg-center bg-no-repeat"
             src={banner2}
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide className="relative object-cover w-max before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-purple-700 before:opacity-20">
+        <SwiperSlide className="relative object-cover w-max before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-40">
           <img
             className="md:h-[80vh] h-[50vh] lg:h-[120vh] w-full bg-cover bg-center bg-no-repeat"
             src={banner3}
@@ -53,13 +53,12 @@ const Banner = () => {
         </SwiperSlide>
       </div>
       <div className="absolute z-10 top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <h2 className="lg:text-4xl md:text-3xl text-lg font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#6345ED] to-[#DC39FC]">
-          Your Title Blah Blah
+        <h2 className="lg:text-4xl md:text-3xl text-lg font-bold text-white text-center">
+        Transforming Your Home, One Service at a Time
         </h2>
-        <div className="flex lg:gap-10 gap-5 justify-center">
+        <div className="flex lg:gap-10 gap-5 justify-center md:text-lg text-center text-white">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique,
-            dolorum.
+          One-stop solution for your services. Order any service, anytime.
           </p>
         </div>
       </div>
