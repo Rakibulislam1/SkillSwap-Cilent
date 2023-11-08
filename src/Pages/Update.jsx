@@ -118,6 +118,7 @@ const Update = () => {
                   placeholder="Price"
                   className="input input-bordered w-72"
                   required
+                  defaultValue={service.service_price}
                   name="service_price"
                 />
               </div>

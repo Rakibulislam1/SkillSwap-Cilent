@@ -28,12 +28,12 @@ const Services = () => {
           <div className="relative flex items-center justify-end">
             <input
               type="text"
-              placeholder="Enter Email Address"
+              placeholder="Search your "
               className="input input-bordered border-none rounded-full py-3 px-5 md:w-[380px] w-[350px]"
             />
             <div className="flex rounded-full mr-1 px-4 py-2 items-center gap-2 bg-gradient-to-r from-[#6345ED] to-[#DC39FC] absolute ">
               <FaLocationArrow className="text-white"></FaLocationArrow>
-              <p className="text-white font-semibold">Browse More</p>
+              <p className="text-white font-semibold">Search Here</p>
             </div>
           </div>
         </div>
