@@ -66,33 +66,37 @@ const Nav = () => {
           <Navbar.Link>Services</Navbar.Link>
         </NavLink>
         <Navbar.Link>
+         {user ? 
           <Dropdown label="Dropdown" inline>
-            <Dropdown.Item>
-              <NavLink
-                to="/myServices"
-                className={({ isActive }) => (isActive ? "underline" : "")}
-              >
-                My Services
-              </NavLink>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <NavLink
-                to="/addService"
-                className={({ isActive }) => (isActive ? "underline" : "")}
-              >
-                Add Service
-              </NavLink>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <NavLink
-                to="/mySchedules"
-                className={({ isActive }) => (isActive ? "underline" : "")}
-              >
-                My schedules
-              </NavLink>
-            </Dropdown.Item>
-            
-          </Dropdown>
+          <Dropdown.Item>
+            <NavLink
+              to="/myServices"
+              className={({ isActive }) => (isActive ? "underline" : "")}
+            >
+              My Services
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink
+              to="/addService"
+              className={({ isActive }) => (isActive ? "underline" : "")}
+            >
+              Add Service
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink
+              to="/mySchedules"
+              className={({ isActive }) => (isActive ? "underline" : "")}
+            >
+              My schedules
+            </NavLink>
+          </Dropdown.Item>
+          
+        </Dropdown>
+        :
+        ''
+         }
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

@@ -10,6 +10,7 @@ import AddService from "../Components/AddService";
 import MySchedules from "../Components/MySchedules";
 import MyServices from "../Components/MyServices";
 import Update from "../Pages/Update";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -31,31 +32,31 @@ const router = createBrowserRouter([
       },
       {
         path: '/services',
-        element: <Services></Services>,
+        element: <Services/>,
         loader: () => fetch("http://localhost:5000/api/v1/services")
       },
       {
         path: '/singleService/:id',
-        element: <SingleService></SingleService>,
+        element: <SingleService/>,
         loader: () => fetch("http://localhost:5000/api/v1/services")
       },
       {
         path: '/myServices',
-        element: <MyServices></MyServices>,
+        element: <PrivateRoute><MyServices/></PrivateRoute>,
       },
       {
         path: '/addService',
-        element: <AddService></AddService>,
+        element: <PrivateRoute><AddService/></PrivateRoute>,
         loader: () => fetch("http://localhost:5000/api/v1/services")
       },
       {
         path:'/update/:id',
-        element:<Update></Update>,
+        element:<Update/>,
         loader:()=> fetch('http://localhost:5000/api/v1/services')
       },
       {
         path:'/mySchedules',
-        element: <MySchedules></MySchedules>,
+        element: <PrivateRoute><MySchedules/></PrivateRoute>,
       }
     ]
   },

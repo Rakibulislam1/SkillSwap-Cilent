@@ -54,7 +54,11 @@ const MyServices = () => {
         <h2 className="text-center my-10 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#6345ED] to-[#DC39FC]">My Services</h2>
       </div>
       
-      {myServices?.map((services) => (
+      {myServices.length === 0 ? <div className="text-center my-20 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#6345ED] to-[#DC39FC]">
+        No Service added
+      </div>
+      :
+      myServices?.map((services) => (
         <div key={services._id}>
           <div className="overflow-x-auto">
             <table className="table max-w-7xl mx-auto">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import googleImg from "../../src/assets/Images/google.png";
 import { Helmet } from "react-helmet";
@@ -9,6 +9,9 @@ const Login = () => {
   const { login, googleSignIn } = useAuth();
 
   const navigate = useNavigate();
+  const location = useLocation();
+  
+
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -21,8 +24,8 @@ const Login = () => {
     try {
       await login(email, password);
       toast.success("Logged in successfully", { id: toastId });
+      navigate(location?.state ? location?.state : "/");
 
-      navigate("/");
     } catch (err) {
       toast.error(err.message, { id: toastId });
     }
@@ -35,8 +38,8 @@ const Login = () => {
     try {
       await googleSignIn();
       toast.success("Logged in successfully", { id: toastId });
+      navigate(location?.state ? location?.state : "/");
 
-      navigate("/");
     } catch (err) {
       toast.error(err.message, { id: toastId });
     }

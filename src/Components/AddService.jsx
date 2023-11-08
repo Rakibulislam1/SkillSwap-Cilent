@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 const AddService = () => {
   const { user } = useAuth();
   const addService = useLoaderData();
+  console.log(addService);
 
   const handleAddService = (event) => {
     event.preventDefault();
@@ -17,7 +18,7 @@ const AddService = () => {
     const service_price = form.service_price.value;
     const service_location = form.service_location.value;
     const service_des = form.service_des.value;
-    const provider_img = addService.provider_name;
+    const provider_img = addService.provider_img;
     const services = {
       service_img,
       service_name,

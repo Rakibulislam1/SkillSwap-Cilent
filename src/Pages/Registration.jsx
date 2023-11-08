@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -8,15 +8,16 @@ const Registration = () => {
 
   const {createUser, handleUpdateProfile} = useAuth();
 
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [name, setName] = useState();
   const [photo, setPhoto] = useState();
 
-  console.log(createUser);
 
-  const navigate = useNavigate();
+ 
 
   const handleCreateUser = async (e) => {
     e.preventDefault();
@@ -28,7 +29,7 @@ const Registration = () => {
      handleUpdateProfile(name, photo);
      toast.success('Signed up successfully', {id : toastId});
 
-     navigate('/');
+     navigate(location?.state ? location?.state : "/");
     }
     catch (err){
       toast.error(err.message);
