@@ -44,8 +44,6 @@ const MyPendingSchedules = () => {
                         <th>Provider Name</th>
                         <th>Service Name</th>
                         <th>Service Price</th>
-                        <th>Service update</th>
-                        <th>Service Delete</th>
                         <th></th>
                       </tr>
                     </thead>

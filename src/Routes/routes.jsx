@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/singleService/:id",
-        element: <SingleService />,
+        element: <PrivateRoute><SingleService /></PrivateRoute>,
         loader: () =>
           fetch("https://assign11server.vercel.app/api/v1/services"),
       },
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        element: <Update />,
+        element: <PrivateRoute><Update /></PrivateRoute>,
         loader: () =>
           fetch("https://assign11server.vercel.app/api/v1/services"),
       },
