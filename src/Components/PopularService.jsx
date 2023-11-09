@@ -3,20 +3,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const PopularService = () => {
-  // const axios = useAxi
-
-  // const getServices = () => {
-
-  // }
-
-  // const query = useQuery({
-  //   queryKey : ['service'],
-  //   queryFn : []
-  // })
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/services")
+    fetch("https://assign11server.vercel.app/api/v1/services")
       .then((response) => response.json())
       .then((data) => setPopular(data));
   }, []);
@@ -41,12 +31,10 @@ const PopularService = () => {
                 <h4 className="block mb-2 font-sans text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#6345ED] to-[#DC39FC] antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                   {popularServices.service_name}
                 </h4>
-                <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-                  {
-                    popularServices.service_des.length > 100 ? popularServices.service_des.slice(0,100) : popularServices.service_des
-                      
-                    
-                  }
+                <p className="block mb-8 font-sans text-pink-500 antialiased font-normal leading-relaxed">
+                  {popularServices.service_des.length > 100
+                    ? popularServices.service_des.slice(0, 100)
+                    : popularServices.service_des}
                 </p>
 
                 <div className="flex justify-between items-center">
@@ -54,7 +42,7 @@ const PopularService = () => {
                     <div>
                       <img
                         className="w-10 h-10 rounded-full border-2 border-rounded border-green-500"
-                        src={popularServices.provider_img}
+                        src={popularServices.userImg}
                         alt=""
                       />
                     </div>
@@ -62,10 +50,16 @@ const PopularService = () => {
                       <div>{popularServices.provider_name}</div>
                     </div>
                   </div>
-                  <p className="font-medium">${popularServices.service_price}</p>
+                  <p className="font-medium">
+                    ${popularServices.service_price}
+                  </p>
                 </div>
 
-                <Link to={`/singleService/${popularServices._id}`} className="inline-block mt-5" href="#">
+                <Link
+                  to={`/singleService/${popularServices._id}`}
+                  className="inline-block mt-5"
+                  href="#"
+                >
                   <button
                     className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"
@@ -93,7 +87,11 @@ const PopularService = () => {
           </div>
         ))}
       </div>
-        <Link to='/services'><button className="px-4 my-10 block mx-auto py-2 font-semibold text-white rounded-md bg-gradient-to-r from-[#6345ED] to-[#DC39FC] hover:rounded-full">Show All</button></Link>
+      <Link to="/services">
+        <button className="px-4 my-10 block mx-auto py-2 font-semibold text-white rounded-md bg-gradient-to-r from-[#6345ED] to-[#DC39FC] hover:rounded-full">
+          Show All
+        </button>
+      </Link>
     </div>
   );
 };

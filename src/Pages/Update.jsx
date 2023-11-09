@@ -15,8 +15,6 @@ const Update = () => {
     setService(find);
   }, [data, id]);
 
-  
-
   const handleUpdate = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -35,11 +33,10 @@ const Update = () => {
       service_price,
       service_location,
       service_des,
- 
     };
 
     axios
-      .put(`http://localhost:5000/api/v1/services/${id}`, update)
+      .put(`https://assign11server.vercel.app/api/v1/services/${id}`, update)
       .then((res) => {
         console.log(res.data);
         Swal.fire("Good job!", "Product Updated Successfully!", "success");

@@ -36,7 +36,7 @@ const SingleService = () => {
     };
     console.log(booking);
 
-    fetch("http://localhost:5000/api/v1/bookings", {
+    fetch("https://assign11server.vercel.app/api/v1/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -82,7 +82,7 @@ const SingleService = () => {
                     <div>
                       <img
                         className="w-10 h-10 rounded-full border-2 border-rounded border-green-500"
-                        src={singleService.provider_img}
+                        src={singleService.userImg}
                         alt=""
                       />
                     </div>
@@ -237,7 +237,7 @@ const SingleService = () => {
                 <span className="label-text font-semibold">Description</span>
               </label>
               <textarea
-              disabled
+                disabled
                 name="service_des"
                 defaultValue={singleService.service_des}
                 className="border-2 p-4 placeholder:text-gray-600 w-full"

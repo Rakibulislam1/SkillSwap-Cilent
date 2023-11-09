@@ -1,16 +1,23 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { FaLocationDot, FaLocationArrow } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
-
+import { useState } from "react";
 
 const Services = () => {
-
   const allServicesData = useLoaderData();
+  const [show, setShow] = useState(6);
 
-  
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleOnClick = () => {
+    setShow(allServicesData?.length);
+
+    setIsVisible(true);
+  };
+
   return (
     <>
-    <Helmet>
+      <Helmet>
         <meta charSet="utf-8" />
         <title>Skill-Swap | All-Services</title>
       </Helmet>
@@ -44,7 +51,7 @@ const Services = () => {
             Our All Services
           </h2>
           <div className="grid grid-cols-1 gap-5 px-2 mb-10">
-            {allServicesData.map((allServices) => (
+            {allServicesData.slice(0, show).map((allServices) => (
               <div key={allServices._id}>
                 <div className="relative hover:shadow-xl flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                   <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
@@ -69,7 +76,7 @@ const Services = () => {
                         <div>
                           <img
                             className="w-10 h-10 rounded-full border-2 border-rounded border-green-500"
-                            src={allServices.provider_img}
+                            src={allServices.userImg}
                             alt=""
                           />
                         </div>
@@ -89,7 +96,10 @@ const Services = () => {
                       </h4>
                     </div>
 
-                    <Link to={`/singleService/${allServices._id}`} className="inline-block mt-5">
+                    <Link
+                      to={`/singleService/${allServices._id}`}
+                      className="inline-block mt-5"
+                    >
                       <button
                         className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button"
@@ -117,6 +127,17 @@ const Services = () => {
               </div>
             ))}
           </div>
+          <button
+            onClick={handleOnClick}
+            className={
+              isVisible
+                ? "hidden"
+                : "bg-[#2E856E] rounded-md text-white px-6 py-3 mx-auto flex justify-center my-6"
+            }
+          >
+            
+            Show All
+          </button>
         </div>
       </div>
     </>

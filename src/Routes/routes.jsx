@@ -15,52 +15,67 @@ import PrivateRoute from "./PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout/>,
+    element: <MainLayout />,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
-        path: '/login',
+        path: "/login",
         element: <Login></Login>,
       },
       {
-        path: '/register',
+        path: "/register",
         element: <Registration></Registration>,
       },
       {
-        path: '/services',
-        element: <Services/>,
-        loader: () => fetch("http://localhost:5000/api/v1/services")
+        path: "/services",
+        element: <Services />,
+        loader: () =>
+          fetch("https://assign11server.vercel.app/api/v1/services"),
       },
       {
-        path: '/singleService/:id',
-        element: <SingleService/>,
-        loader: () => fetch("http://localhost:5000/api/v1/services")
+        path: "/singleService/:id",
+        element: <SingleService />,
+        loader: () =>
+          fetch("https://assign11server.vercel.app/api/v1/services"),
       },
       {
-        path: '/myServices',
-        element: <PrivateRoute><MyServices/></PrivateRoute>,
+        path: "/myServices",
+        element: (
+          <PrivateRoute>
+            <MyServices />
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/addService',
-        element: <PrivateRoute><AddService/></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/api/v1/services")
+        path: "/addService",
+        element: (
+          <PrivateRoute>
+            <AddService />
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch("https://assign11server.vercel.app/api/v1/services"),
       },
       {
-        path:'/update/:id',
-        element:<Update/>,
-        loader:()=> fetch('http://localhost:5000/api/v1/services')
+        path: "/update/:id",
+        element: <Update />,
+        loader: () =>
+          fetch("https://assign11server.vercel.app/api/v1/services"),
       },
       {
-        path:'/mySchedules',
-        element: <PrivateRoute><MySchedules/></PrivateRoute>,
-      }
-    ]
+        path: "/mySchedules",
+        element: (
+          <PrivateRoute>
+            <MySchedules />
+          </PrivateRoute>
+        ),
+      },
+    ],
   },
 ]);
-
 
 export default router;

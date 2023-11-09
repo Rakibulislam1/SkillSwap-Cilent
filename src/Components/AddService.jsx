@@ -19,6 +19,7 @@ const AddService = () => {
     const service_location = form.service_location.value;
     const service_des = form.service_des.value;
     const provider_img = addService.provider_img;
+    const userImg = user.photoURL
     const services = {
       service_img,
       service_name,
@@ -28,10 +29,11 @@ const AddService = () => {
       service_location,
       service_des,
       provider_img,
+      userImg
     };
     console.log(services);
 
-    fetch("http://localhost:5000/api/v1/services", {
+    fetch("https://assign11server.vercel.app/api/v1/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
